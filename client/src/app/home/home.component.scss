@@ -1,0 +1,126 @@
+
+.scrollable{
+  overflow: auto;
+  height: 80vh;
+}
+table{
+  font-size: small;
+  width: 100%;
+}
+
+.bet:nth-child(2n) {
+  background-color: #f1f1f1;
+}
+
+
+.bet-info{
+  text-align: center;
+  color: #ffffff;
+}
+.bet {
+  border-radius: 10px;
+  margin-bottom: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: small;
+  p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+  }
+  h5{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .states{
+    display: inline-block;
+    width: 10%;
+    .icon{
+      width: 1.5rem;
+      height: 1.5rem;
+      i{
+        font-size: small;
+      }
+    }
+  }
+  .bet-success {
+    background-color: #1dcd35;
+  }
+
+  .bet-danger {
+    background-color: #3194d5;
+  }
+
+  .bet-header {
+    padding: 4px;
+    .percent, .sport, .date {
+      display: inline-block;
+      width: 20%;
+      vertical-align: top;
+      margin: auto;
+      color: #ffffff;
+
+      h5 {
+        color: white;
+      }
+    }
+
+    .sport {
+      text-align: center;
+      width: 40%;
+    }
+
+    .date {
+      text-align: right;
+      width: 20%;
+    }
+  }
+
+  .bet-body {
+    font-size: small;
+    display: inline-block;
+    width: 90%;
+    vertical-align: top;
+
+    p {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .bet-state {
+    text-align: center;
+    width: 8%;
+    vertical-align: top;
+    display: inline-block;
+
+    h6 {
+      margin: 0px !important;
+    }
+
+    .states {
+      width: 70%;
+      display: inline-block;
+      margin: auto;
+      vertical-align: top;
+    }
+
+    .qualificate {
+      width: 30%;
+      display: inline-block;
+      margin: auto;
+      vertical-align: top;
+
+      button {
+        width: 100%;
+        display: block;
+        vertical-align: top;
+      }
+    }
+  }
+}

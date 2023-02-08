@@ -1,0 +1,18 @@
+export default {
+  SOCCER_ID: '5d8bf2977bea0e3c3b32b967',
+  TENNIS_ID: '5d8bf2977bea0e3c3b32b968',
+  BASKETBALL: '5d8bf2967bea0e3c3b32b963',
+  BASEBALL: '5d8bf2957bea0e3c3b32b962',
+  VOLLEYBALL: '5d8bf2977bea0e3c3b32b969',
+  AMERICAN_FOOTBALL: '5d8bf2977bea0e3c3b32b96a',
+  HOCKEY: '5d8bf2967bea0e3c3b32b966',
+  BETJUEGO_ID: 'Betjuego',
+  BETPLAY_ID: 'Betplay',
+  WPLAY_ID: 'Wplay',
+  MEGAAPUESTAS_ID: 'Megaapuestas',
+  BETALFA_ID: 'Betalfa',
+  COLBET_ID: 'Colbet',
+  MELBET_ID: 'Melbet',
+  CODERE_ID: 'Codere',
+  HEADLESS: false,
+};

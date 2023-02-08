@@ -1,0 +1,110 @@
+<main>
+    <div class="position-relative">
+        <!-- Hero for FREE version -->
+        <section class="section section-lg section-hero section-shaped">
+            <!-- Background circles -->
+            <div class="shape shape-style-1 shape-primary">
+                <span class="span-150"></span>
+                <span class="span-50"></span>
+                <span class="span-50"></span>
+                <span class="span-75"></span>
+                <span class="span-100"></span>
+                <span class="span-75"></span>
+                <span class="span-50"></span>
+                <span class="span-100"></span>
+                <span class="span-50"></span>
+                <span class="span-100"></span>
+            </div>
+            <div class="shape-container d-flex align-items-center">
+                <div class="col px-0">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-10 col-md-12 col-xs-12">
+                            <div *ngIf="!bets || (bets && bets.length<1)">
+                                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                                <h5 align="center" class="text-white">Buscando</h5>
+                            </div>
+
+                            <div class="bet row" *ngFor="let bet of bets" (click)="viewBet(bet)">
+                                <div class="col-lg-2 col-md-12 bet-info"
+                                     [ngClass]="{'bet-success': bet.percent>=0, 'bet-danger':bet.percent<0}">
+                                    <p><small>{{bet.sport.name}}</small></p>
+                                    <h5>{{bet.percent | number}}%</h5>
+                                    <span><small>{{bet.updated_at | date: 'short'}}</small></span>
+                                </div>
+                                <div class="col-lg-10 col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3">
+                                            {{bet.event1_details.book.name}}
+                                        </div>
+                                        <div class="col-lg-1 d-none d-lg-block d-xl-block ">
+                                            <span>{{bet.event1_details.start_at | date: 'M/d hh:mm' }}</span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            {{bet.event1_details.name}}
+                                        </div>
+                                        <div class="col-lg-2 d-none d-lg-block d-xl-block">
+                                            <small>{{bet.event1_details.league}}</small>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            {{bet.odd1.name}}
+                                        </div>
+                                        <div class="col-lg-1 col-md-2">
+                                            {{bet.odd1.value}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-12">
+                                            {{bet.event2_details.book.name}}
+                                        </div>
+                                        <div class="col-lg-1 d-none d-lg-block d-xl-block">
+                                            <span>{{bet.event2_details.start_at | date: 'M/d hh:mm' }}</span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            {{bet.event2_details.name}}
+                                        </div>
+                                        <div class="col-lg-2 d-none d-lg-block d-xl-block">
+                                            <small>{{bet.event2_details.league}}</small>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            {{bet.odd2.name}}
+                                        </div>
+                                        <div class="col-lg-1 col-md-2">
+                                            {{bet.odd2.value}}
+                                        </div>
+                                    </div>
+                                    <div class="row" *ngIf="bet.odd3 && bet.event3_details && bet.event3_details.name">
+                                        <div class="col-lg-2 col-md-3 col-12">
+                                            {{bet.event3_details.book.name}}
+                                        </div>
+                                        <div class="col-lg-1 d-none d-lg-block d-xl-block">
+                                            <span>{{bet.event3_details.start_at | date: 'M/d hh:mm' }}</span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            {{bet.event3_details.name}}
+                                        </div>
+                                        <div class="col-lg-2 d-none d-lg-block d-xl-block">
+                                            <small>{{bet.event3_details.league}}</small>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            {{bet.odd3.name}}
+                                        </div>
+                                        <div class="col-lg-1 col-md-2">
+                                            {{bet.odd3.value}}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- SVG separator -->
+
+        </section>
+    </div>
+    <!--
+      <app-sections></app-sections>
+    -->
+</main>

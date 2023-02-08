@@ -1,0 +1,57 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/winnersure/src",
+  "monorepo": true,
+  "root": "apps/winnersure",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/winnersure/tsconfig.app.json"
+  },
+  "projects": {
+    "winnersure": {
+      "type": "application",
+      "root": "apps/winnersure",
+      "entryFile": "main",
+      "sourceRoot": "apps/winnersure/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/winnersure/tsconfig.app.json"
+      }
+    },
+    "reader": {
+      "type": "application",
+      "root": "apps/reader",
+      "entryFile": "main",
+      "sourceRoot": "apps/reader/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/reader/tsconfig.app.json"
+      }
+    },
+    "elastic": {
+      "type": "application",
+      "root": "apps/elastic",
+      "entryFile": "main",
+      "sourceRoot": "apps/elastic/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/elastic/tsconfig.app.json"
+      }
+    },
+    "hero": {
+      "type": "application",
+      "root": "apps/hero",
+      "entryFile": "main",
+      "sourceRoot": "apps/hero/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/hero/tsconfig.app.json"
+      }
+    },
+    "live": {
+      "type": "application",
+      "root": "apps/live",
+      "entryFile": "main",
+      "sourceRoot": "apps/live/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/live/tsconfig.app.json"
+      }
+    }
+  }
+}
